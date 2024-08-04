@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Register</title>
+</head>
+<body>
+  <style>
+    body {
+      width: 100%;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    } 
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 20% ;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <h1>Login</h1>
+  <form action="/login" method="post">
+    <div>
+      <label for="login-username">Username:</label>
+      <input type="text" id="login-username" name="username" required>
+    </div>
+    <div>
+      <label for="login-password">Password:</label>
+      <input type="password" id="login-password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+
+  <h1>Register</h1>
+  <form action="/register" method="post">
+    <div>
+      <label for="register-username">Username:</label>
+      <input type="text" id="register-username" name="username" required>
+    </div>
+    <div>
+      <label for="register-password">Password:</label>
+      <input type="password" id="register-password" name="password" required>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
